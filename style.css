@@ -1,0 +1,1134 @@
+:root {
+  --main: rgb(171,122,89);
+  --offwhite:  #dfbf99;
+  --black: #000;
+  --white: #FFF;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  display: flex;
+  left: 0;
+  right: 0;
+  font-family: "Times New Roman";
+}
+
+/* For laptops & PCs */
+@media all and (min-width: 769px) {
+
+  body {
+      background-color: var(--black);
+  }  
+  
+h1, h2, h3, h4, h5 {
+  font-family: "courier";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  float: right;
+  justify-content: space-between;
+  background-color: rgba(0,0,0,0.3);  
+  height: 4vw;
+  z-index: 10;
+}
+
+#header a {
+  display: flex;
+  color: var(--white);
+  text-decoration: none;
+  height: 2vw;
+  padding: 0.5vw;
+  margin: auto;
+  margin-left: 0;
+  margin-right: 3vw;
+  width: auto;
+  font-size: 1.25vw;
+  justify-content: center;
+}
+
+#header a:hover {
+  color: var(--offwhite);
+}	
+
+#header a p {
+  margin: auto;
+  font-weight: bolder;
+}
+
+#header h2 {
+  font-family: 'Lobster';
+  font-size: 2.5vw;
+  margin: 0.75vw 0 0 5vw;
+  color: var(--white);
+}
+
+#links {
+  display: flex;
+}
+
+#intro {
+  position: absolute;
+  display: flex;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  height: 52.5vw;
+  align-items: center;
+  background-color: var(--offwhite);
+  background-image:  url("https://i.ibb.co/ZW13LSx/cappacino-Pouring.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+#intro img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  border-bottom: 0.25vw var(--black) solid;
+}
+
+#intro h1 {
+  font-size: 2.5vw;
+  font-weight: bolder;
+  z-index: 6;
+  color: white;
+}
+
+#reviews {
+  width: 100%;
+  margin: 2.5vw 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  justify-content: space-around;
+  height: 100%;
+  -webkit-text-stroke: 0.1vw black;
+}
+
+.pair {
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  margin: 0 2.5vw 0 2.5vw;
+}
+
+.pair h1 {
+  width: 40vw;
+  background-color: rgba(0,0,0,0.3);
+  padding: 1vw;
+}
+
+#arrow {
+  z-index: 20;
+  width: 2vw;
+  height: 1vw;
+  position: absolute;
+  left: 47vw;
+  top: 45vw;
+}
+
+#arrow-img {
+  width: 6vw;
+  height: 3vw;
+}
+
+#menu {
+position: absolute;
+left: 0;
+right: 0;
+top: 52.5vw;
+height: 42.5vw;
+background-color: var(--black);
+background-image: url("https://i.ibb.co/fXzJfDT/coffee-Shop.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+display: flex;
+justify-content: space-around;
+align-items: center;
+border-top: 1.5vw var(--black) solid;
+border-bottom: 1.5vw var(--black) solid;
+}
+
+#hours {
+  background-color: var(--white);
+  max-width: 20vw;
+  height: 16vw;
+  border: 5px var(--black) solid;
+  padding: 1vw 3vw 0 2vw;
+  margin: 5vw 0 2.5vw 0;
+  box-shadow: 0 0 25px var(--white);
+}
+
+#hours h3 {
+  font-family: 'Times New Roman';
+  font-size: 2vw;
+  border-bottom: 0.25vw var(--black) solid;
+  border-right: 0.25vw var(--black) solid;
+  padding: 0.25vw 0.5vw 0.25vw 0.5vw;
+  margin: 1vw 0 0 1vw;
+  box-shadow: 0 0 0px var(--black);  font-size: 2vw;
+  margin: 0.5vw 0 1vw 0;
+  padding: 0 0 0.25vw 0vw;
+  border-bottom: 0.25vw var(--black) solid;
+  border-right: 0.25vw var(--black) solid;
+  width: 5.75vw;
+}
+
+#hours p {
+  font-size: 1.5vw;
+  margin: 0 0 1vw 1vw;
+}
+
+#menu-itself {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 17vw;
+  background-color: var(--white);
+  margin: 5vw 0 2.5vw 0;
+  border: 5px var(--black) solid;
+  box-shadow: 0 0 25px var(--white);
+}
+
+#menu-itself h1 {
+  font-family: 'Times New Roman';
+  font-size: 2vw;
+  border-bottom: 0.25vw var(--black) solid;
+  border-right: 0.25vw var(--black) solid;
+  padding: 0.25vw 0.5vw 0.25vw 0.5vw;
+  margin: 1vw 0 0 1vw;
+  box-shadow: 0 0 0px var(--black);
+}
+
+#menu-itself p {
+  margin: 0.25vw;
+}
+
+#menu-itself h3 {
+  padding: 0 0 1vw 0;
+}
+
+#menu-body {
+  display: flex;
+  flex-direction: row;
+  width: 60vw;
+  padding:0 5vw 1.5vw 5vw;
+  justify-content: space-around;
+  margin: auto;
+}
+
+#menu-body div {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  align-items: center;
+  justify-content: center;
+}
+
+#menu-body div h3 {
+  font-size: 1.75vw;
+  margin: -2vw 0 0 0;
+}
+
+#menu-body div p {
+  font-size: 1.25vw;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: row;
+}
+
+#locations-about {
+position: absolute;
+left: 0;
+right: 0;
+top: 97.5vw;
+height: 80vw;
+background-color: var(--offwhite);
+background-image: url("https://i.ibb.co/Xx1kYYp/brown-And-Coffee.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: flex-start;
+}
+
+#about {
+  width: 45vw;
+  height: 15vw;
+  background-color: var(--white);
+  border: 5px var(--black) solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2.5vw 0 2.5vw;
+  margin-left: 2.5vw;
+}
+
+#about h3 {
+  font-size: 1.5vw;
+  margin: 1vw 1vw 1vw 1vw;
+  font-family: 'courier';
+}
+
+#about p {
+  font-size: 1.25vw;
+  margin: 0vw 0.5vw 0.75vw 1vw;
+  font-family: 'courier';
+}
+
+#location {
+  width: 20vw;
+  height: 15vw;
+  background-color: transparent;
+  border: 5px var(--black) solid;
+  box-shadow: 0 0 10px var(--white);
+}
+
+#contact img {
+  height: 100%;
+  width: 20vw;
+  border-right: 2px var(--black) solid;
+}
+
+#contact {
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+  height: 15vw;
+  background-color: var(--white);
+  color: var(--black);
+  border: 5px var(--black) solid;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 2.5vw;
+}
+
+#contact-info {
+  width: 30vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+#contact h3 {
+  font-size: 1.5vw;
+  margin: 0vw 1vw 1.5vw 1vw;
+  font-family: 'courier';
+}
+
+#contact p {
+  font-size: 1.25vw;
+  margin: 0.5vw 0.5vw 0.75vw 1vw;
+}
+
+#email {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 15vw;
+  background-color: var(--white);
+  color: var(--black);
+  border: 5px var(--black) solid;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 2.5vw;
+}
+
+#email-txt {
+  width: 50vw;
+  height: 2vw;
+  font-size: 1.3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#email-form {
+  font-size: 1.25vw;
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#customer-email {
+  width: 10vw;
+  height: 1vw;
+  margin: -1vw 1vw 0 0;
+  padding: 0;
+}
+
+#name {
+  width: 10vw;
+  height: 1vw;
+  margin: -1vw 1vw 0vw 0;
+  padding: 0;
+}
+
+#message {
+  width: 30vw;
+  height: 8vw;
+  margin: -1vw 1vw 0vw 0;
+}
+
+#email label {
+  margin:0;
+  padding: 0;
+}
+
+#email form {
+  display: flex;
+  flex-direction: row;
+}
+
+.simple-input {
+  display: flex;
+  flex-direction: column;
+}
+
+#details input, #details label {
+  margin: 0vw 4vw -1vw -1vw;
+  padding: 0 0 0 0;
+}
+
+#submit-button {
+  margin: 3vw 0 0 0;
+  width: 10vw;
+  height: 2vw;
+  font-family: 'Times New Roman';
+  background-color: var(--white);
+  border: 2px var(--black) solid;
+  box-shadow: 0 0 3px var(--black);
+  font-size: 1vw;
+}
+
+#submit-button:hover {
+  background-color: var(--offwhite);
+}
+
+#footer {
+  position: absolute;
+  top: 177.5vw;
+  left: 0;
+  right: 0;
+  height: 30vw;
+  background-color;
+  width: 100%;
+  background-color: var(--main);
+  border-top: 5px var(--black) solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer h1 {
+  font-family: "Lobster";
+  color: white;
+  font-size: 3vw;
+}
+
+#footer div {
+  display: flex;
+  width: 60vw;
+  justify-content: space-between
+}
+
+#footer h3 {
+  color: var(--white);
+  font-size: 1.25vw
+}
+
+#footer p {
+  color: var(--white);
+  font-size: 1vw;
+}
+
+#disclaimer {
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  height: 5vw;
+  align-items: center;
+}
+
+#disclaimer p {
+  text-align: center;
+}
+  
+  
+}
+
+/*For smart phones and portrait tablets*/
+@media screen and (max-width: 480px) {
+  
+  #reviews{display:none;}
+  
+  #arrow{display:none;}
+  
+  body {
+    background-color: var(--white);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  #header {
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: 'lobster';
+    font-size: 25vw;
+    justify-self: center;
+    background-color: var(--offwhite);
+    background-image:  url("https://i.ibb.co/ZW13LSx/cappacino-Pouring.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    height: 70vw;
+    border-bottom: 5px var(--black) solid;
+  }
+  #header h2 {
+    margin-top: 0vw;
+    font-size: 25vw;
+    background-color: rgba(0,0,0,0.2);
+    height: 70vw;
+  }
+  
+  #header a {
+    display: none;
+  }
+  
+  #intro {
+    margin-top: 900vw;
+  }
+  
+  #menu {
+    position: absolute;
+    top: 70vw;
+    left: 0;
+    right: 0;
+    background-color: var(--black);
+    background-image: url("https://i.ibb.co/fXzJfDT/coffee-Shop.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1.5vw var(--black) solid;
+    border-bottom: 1.5vw var(--black) solid;
+    height: 300vw;
+  }
+
+  
+  #hours {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 6vw;
+    background-color: var(--white);
+    border: 0.75vw var(--black) solid;
+    width: 80vw;
+    box-shadow: 0 0 5vw var(--white);
+  }
+  
+  #hours p {
+    padding: 2vw;
+    margin: 0;
+  }
+  
+  #hours h3 {
+    display: none;
+  }
+  
+#menu-itself {
+  background-color: white;
+  border: 0.75vw var(--black) solid;
+  width: 80vw;
+  box-shadow: 0 0 5vw var(--white);
+  }
+
+#menu-itself h1 {
+  width: 40vw;
+  margin-left: 20vw;
+  font-size: 10vw;
+  padding-bottom: 4vw;
+  border-bottom: 1vw var(--black) solid;
+}
+
+#menu-itself h3 {
+  font-size: 8vw;
+}
+
+#menu-itself p {
+  font-size: 5vw;
+}
+
+  #locations-about {
+    position: absolute;
+    top: 373vw;
+    left: 0;
+    right: 0;
+    height: 550vw;
+    background-color: var(--offwhite);
+    background-image: url("https://i.ibb.co/Xx1kYYp/brown-And-Coffee.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-bottom: 2vw var(--black) solid;
+  }
+  
+  #about {
+    width: 70vw;
+    margin-left: 10vw;
+    background-color: var(--white);
+    border: 1vw var(--black) solid;
+    padding: 5vw;
+  }
+  
+  #about h3 {
+    font-size: 8vw;
+    padding: 0 0 2.5vw 0;
+    margin: 0 0 0 10vw;
+    width: 50vw;
+    border-bottom: 1vw var(--black) solid;
+  }
+  
+  #about p {
+    text-align: justify;
+    font-size: 5.5vw;
+  }
+  
+  #contact img {
+    width: 80vw;
+    margin-left: -5vw;
+    margin-top: -5vw;
+    height: auto;
+    max-height: 100vw;
+    border-bottom: 1vw var(--black) solid;
+  }
+  
+  #contact {
+    background-color: var(--white);
+    width: 70vw;
+    margin-left: 10vw;
+    border: 1vw var(--black) solid;
+    padding: 5vw;
+  }
+  
+  #contact h3 {
+    font-size: 9vw;
+  }
+  
+  #contact p {
+    font-size: 6.25vw;
+  }
+  
+  #contact a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  #email {
+    width: 70vw;
+    padding: 5vw;
+    margin-left: 10vw;
+    background-color: var(--white);
+    border: 1vw var(--black) solid;
+    height: 200vw;
+  }
+  
+  #email-txt {
+    margin-top: -5vw;
+  }
+  
+  #email h3 {
+    font-size: 7.5vw;
+    line-height: 12vw;
+  }
+  
+  #send-us-a-message {
+    margin-top: -5vw;
+  }
+  
+  #email-form h5 {
+    font-size: 6vw;
+    margin: 0vw;
+  }
+  
+  #email-form input {
+    margin-bottom: 10vw;
+    margin-top: 2vw;
+    width: 60vw;
+    height: 10vw;
+    font-size: 6vw;
+    border: 0.5vw var(--black) solid;
+  }
+  
+  #submit-button {
+    position: absolute;
+    top: 520vw;
+    left: 21vw;
+  }
+  
+  #message-div h5 {
+    margin-top: 10vw;
+    margin-bottom: 2vw;
+  }
+  
+  #message {
+    height: 50vw;
+    width: 60vw;
+    font-size: 6vw;
+    border: 0.5vw var(--black) solid;
+  }
+  
+  #footer {
+    position: absolute;
+    top: 925vw;
+    left: 0;
+    right: 0;
+    background-color: var(--main);
+    color: white;
+    padding: 5vw;
+  }
+  
+  #footer h1 {
+    font-size: 10vw;
+  }
+  
+  #footer h3 {
+    font-size: 5vw;
+  }
+  
+  #footer p {
+    font-size: 5vw;
+  }
+  
+}
+
+/*Tablets*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  
+  #header {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70vw;
+  align-items: center;
+  background-color: var(--offwhite);
+  background-image:  url("https://i.ibb.co/ZW13LSx/cappacino-Pouring.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 1.5vw var(--black) solid;
+  color: white;
+  z-index: 5;
+  }
+  
+  #header h2 {
+    font-family: 'lobster';
+    font-size: 10vw;
+    position: absolute;
+    top: 5vw;
+    background-color: rgba(0,0,0,0.3);
+    padding: 0.5vw 2vw 0.5vw 2vw;
+  }
+  
+  #links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    height: 10vw;
+    background-color: rgba(0,0,0,0.3);
+  }
+  
+  #links a {
+    margin-top: 1vw;
+    text-decoration: none;
+    color: inherit;
+    font-size: 5vw;
+    width: 25vw;
+    background-color: rgb(0,0,0,0.6);
+    height: 5vw;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1vw 0 1vw 0;
+  }
+  
+  #links a p {
+    margin-top: 0vw;
+  }
+  
+  #reviews {
+    font-size: 2.5vw;
+    position: absolute;
+    top: 30;
+    left: 0;
+    right: 0;
+    z-index: 7;
+    color: var(--white);
+  }
+  
+  #tablet-1 {
+    width: 40vw;
+    margin: 35vw 0 0 3vw;
+    background-color: rgba(0,0,0,0.3);
+    height: 28vw;
+    padding: 4vw 2vw 0 2vw;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+  }
+  
+  #tablet-2 {
+    width: 40vw;
+    margin: -32vw 0 0 53vw;
+    background-color: rgba(0,0,0,0.3);
+    height: 28vw;
+    padding: 2vw;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+  }
+  
+  .tablet-hide {
+    display: none;
+  }
+  
+  #arrow {
+    display: none;
+  }
+  
+  #menu {
+    position: absolute;
+    top: 70vw;
+    left: 0;
+    right: 0;
+    background-color: var(--black);
+    background-image: url("https://i.ibb.co/fXzJfDT/coffee-Shop.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1.5vw var(--black) solid;
+    border-bottom: 1.5vw var(--black) solid;
+    height: 180vw;
+  }
+  
+  #hours {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    padding: 1vw 5vw 1vw 5vw;
+    background-color: var(--white);
+    justify-content: center;
+    align-items: center;
+    border: 1vw var(--black) solid;
+    box-shadow: 0 0 5vw var(--white);
+  }
+  
+  #hours h3 {
+    font-size: 7.5vw;
+    padding: 0 4vw 0 4vw;
+    padding-bottom: 1vw;
+    margin: 0;
+    border-bottom: 1vw var(--black) solid;
+  }
+  
+  #hours p {
+    font-size: 5vw;
+    padding: 0;
+    margin: 1vw;
+  }
+  
+  #menu-itself {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    padding: 3vw 5vw 3vw 5vw;
+    background-color: var(--white);
+    justify-content: center;
+    align-items: center;
+    border: 1vw var(--black) solid;
+    box-shadow: 0 0 5vw var(--white);
+  }
+  
+  #menu-itself h1 {
+    font-size: 7.5vw;
+    margin: 0;
+    padding: 0 4vw 1vw 4vw;
+    border-bottom: 1vw var(--black) solid;;
+  }
+  
+  #menu-itself h3 {
+    font-size: 5vw;
+  }
+  
+  #menu-body div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-body div h3 {
+    font-size: 5vw;
+    margin: 4vw 0 1vw 0;
+  }
+  
+  #menu-body div p {
+    font-size: 3.75vw;
+    margin: 0.5vw;  
+  }
+  
+  #locations-about {
+    position: absolute;
+    top: 252.5vw;
+    left: 0;
+    right: 0;
+    background-color: var(--offwhite);
+    background-image: url("https://i.ibb.co/Xx1kYYp/brown-And-Coffee.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 285vw;
+  }
+  
+  #about {
+    text-align: justify;
+    width: 70vw;
+    padding: 5vw;
+    margin-left: 9vw;
+    background-color: var(--white);
+    border: 1vw var(--black) solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #about h3 {
+    font-size: 5vw;
+    padding: 0 4vw 1vw 4vw;
+    margin: 0;
+    border-bottom: 1vw var(--black) solid;
+  }
+  
+  #about p {
+    font-size: 3.75vw;
+    padding: 0;
+    margin: 3vw 0 0 0;
+  }
+  
+  #contact {
+    width: 70vw;
+    padding: 5vw;
+    padding-bottom: 1vw;
+    margin-left: 9vw;
+    background-color: var(--white);
+    border: 1vw var(--black) solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  #contact img {
+    margin-top: -5vw;
+    width: 80vw;
+    max-height: 100vw;
+    border-bottom: 1vw var(--black) solid;
+  }
+  #contact-info {
+    width: 80vw;
+    background-color: var(--white);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #contact-info h3 {
+    font-size: 5vw;
+    border-bottom: 0.5vw var(--black) solid;
+    width: 60vw;
+    margin: 2vw 0 2vw 10vw;
+  }
+  
+  #contact-info p {
+    font-size: 3.5vw;
+    width: 70vw;
+    margin: 0 0 2vw 5vw;
+  }
+  
+  #contact-info a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  #email {
+    width: 70vw;
+    padding: 5vw;
+    margin-left: 9vw;
+    background-color: var(--white);
+    border: 1vw var(--black) solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #email-txt {
+    margin-top: 4vw;
+    margin-bottom: -5vw;
+  }
+  
+  #email h3 {
+    font-size: 5vw;
+    text-align: center;
+    margin-top: -3vw;
+  }
+  
+  #email-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+    #email-form h5 {
+    font-size: 3.5vw;
+    text-align: center;
+    margin: 5vw 0 0 0;
+  }
+  
+  #email-form input {
+    width: 60vw;
+    margin-left: 2.5vw;
+    margin-top: 2vw;
+    height: 5vw;
+    font-size: 3.5vw;
+    border: 0.5vw var(--black) solid;
+  }
+  
+  #submit-button {
+    position: absolute;
+    top: 269vw;
+    left: 18.75vw;
+    height: 5vw;
+  }
+  
+  #message {
+    width: 60vw;
+    height: 30vw;
+    margin: 2vw 0 7.5vw 2.5vw;
+    border: 0.5vw var(--black) solid;
+    font-size: 3vw;
+  }
+  
+
+#footer {
+  position: absolute;
+  top: 537vw;
+  left: 0;
+  right: 0;
+  background-color: var(--main);
+  border-top: 1.5vw var(--black) solid;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-text: center;
+}
+
+#footer div {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  margin:
+}
+
+#footer h1 {
+  font-size: 5vw;
+  font-family: 'lobster';
+}
+
+#footer h3 {
+  font-size: 3vw;
+}
+
+#disclaimer {
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+#disclaimer p {
+  margin: 1vw;
+  padding: 0;
+  text-align: center;
+}
+
+}
