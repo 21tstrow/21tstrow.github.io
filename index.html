@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="header">
+      <h2>Cafe Fresco</h2>
+      <div id="links">
+        <a href="#menu"><p>Menu</p></a>
+        <a href="#about"><p>About</p></a>
+        <a href="#email"><p>Message Us</p></a>
+      </div><!--links-->
+    </div><!--/#header-->
+
+    <div id="main" class="container-fluid">
+      <div id="intro">
+        <div id="reviews">
+          <div class="pair">
+            <h1 id="tablet-1">"Came for the coffee, stayed for the community!" - Ashley (25)</h1>
+            <h1 class="tablet-hide">"I love Fresco's espresso! It's my ideal drink on rainy day" - John (28)</h1>
+          </div>
+          <div class="pair">
+            <h1 id="tablet-2">My go-to place to study. Great WiFi and Amazing Coffee! - Adelaide (20)</h1>
+            <h1 class="tablet-hide">During cold NY Winters, nothing hits quite like Fresco's - Charlie (19)</h1>
+          </div>
+        </div>
+      </div><!--/#intro-->
+      <div id="arrow">
+        <img id="arrow-img" src="https://i.ibb.co/qnPf7MX/down-arrow.png" alt="down-arrow">
+      </div><!--arrow-->
+      <div id="menu">
+         <div id="hours">
+          <h3>Hours</h3>
+           <p><strong>Mon - Fri</strong>  •   5am to 6pm</p>
+           <p><strong>Saturday</strong>  •   7am to 6pm</p>
+           <p><strong>Sunday</strong> • 9am to 3pm</p>
+        </div><!--contact-->
+        <div id="menu-itself">
+          <h1>Menu</h1>
+          <div id="menu-body">
+            <div id="hot">
+              <h3>Hot</h3>
+              <p>Coffee • 3 | Espresso • 2.5</p>
+              <p>Latte • 4 | Flat White • 5</p>
+              <p>Mocha • 5 | Americano • 2.5</p>
+              <p>Hot Chocolate • 3.5</p>
+              <p><em>Add Flavor Shot • 0.5</em></p>
+              <div class="menu-items">
+              </div><!--menu-items-->
+            </div><!--hot-->
+            <div id="cold">
+              <h3>Iced</h3>
+              <p>Iced Espresso • 2.5 | Iced Latte 4</p>
+              <p>Cold Brew • 5 | Iced Coffee • 3.5</p>
+              <p>Iced Flat White • 5 | Iced Mocha • 5</p>
+              <p>Iced Americano • 2.5</p>
+              <p><em>Add Flavor Shot • 0.75</em></p>
+            </div><!--cold-->
+            <div id="food">
+              <h3>Food</h3>
+              <p>Croissant • 4 | Toast 2.5</p>
+              <p>English Muffin • 3 |  Bagel • 4</p>
+              <p><em>Add Bacon & Egg • 3.5</em></p>
+              <p>Muffin • 6 | Baby Bundt Cake • 8</p>
+              <p>Cookie • 1.50 | Marshmellow Treat • 2</p>
+            </div><!--food-->
+          </div><!--menu-body-->
+        </div><!--menu-itself-->
+      </div><!--/#menu-->
+      <div id="locations-about">
+        
+        <div id="about">
+          <h3>Our Story</h3>
+          <p>Founded in 2008 by two college roomates, Cafe Fresco seeks to unite young people around the freshest coffee available. With fresh-ground beans and ethically sourced milk and milk alternatives, making the best coffee is our cup of joe. Give us a visit to enjoy great coffee and even better company!</p>
+        </div><!--about-->
+        
+        <div id="contact">
+          <img src="https://i.ibb.co/QK0jMz6/Screen-Shot-2021-08-01-at-11-48-07-AM.png">
+          <div id="contact-info">
+            <h3>Grab some coffee with us!</h3>
+            <p><strong>Phone</strong> (212) 839 - 4210</p>
+            <p><strong>Address</strong> 239 E 5th St, New York, NY 10003</p>
+            <a href="#contact"><p><strong>Email</strong> welcome@cafefresco.com</p></a>
+          </div>
+        </div><!--contact-->
+        
+        <div id="email">
+          <div id="email-txt">
+            <h3>Questions? Comments? Concerns?</h3>
+            <h3 id="send-us-a-message">Send us a message!</h3>
+          </div><!--email-txt-->
+          <div id="email-form">
+            <form>
+              <div class="simple-input" id="details">
+                <label for="name"><h5>Name:</h5></label>
+                <input type="text" id="name" name="name" required>
+                <label for="customer-email"><h5>Email:</h5></label>
+                <input type="email" id="customer-email" name="customer-email" required style="margin-bottom: 1vw;">
+                <input id="submit-button" type="submit" value="Send Message">
+              </div><!--simple-input-->
+              <div class="simple-input" id="message-div">
+                <label for="message"><h5>Message:</h5></label>
+                <textarea id="message" name="message" placeholder="Type Here" required></textarea>
+              </div>
+            </form>
+          </div><!--email-form-->
+        </div><!--email-->
+      </div><!--locations-about-->
+      <div id="footer">
+        <h1>Cafe Fresco</h1>
+        <div>
+          <h3>Mon-Fri • 5am to 6pm</h3>
+          <h3>Saturday • 7am to 6pm</h3>
+          <h3>Sunday • 9am to 3pm</h3>
+        </div>
+        <div>
+          <h3>welcome@cafefresco.com</h3>
+          <h3>(212) 839 - 4210</h3>
+          <h3>239 E 5th St, New York</h3>
+        </div>
+        <div id="disclaimer">
+        <p>This website is for example purposes only and bears no association to any <em>Cafe Fresco</em>, cafe or otherwise. The address was randomly grabbed from google maps, and the phone number and email were both made up.</p>
+        <p>If you want a website like the one above, contact me (Tucker Strow) at tucker.kent.strow@gmail.com</p>
+        </div>
+      </div><!--/#footer-->
+    </div><!--/#main-->
+  
+    <script src="script.js"></script>
+  </body>
+</html>
