@@ -349,13 +349,62 @@ a {
   background-position: center;
   background-size: cover;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-
+  
+  #connect-tiles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+   #connect-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 25vw;
+    margin: 0 3vw 0 3vw;
+  }
+  
+  #connect-tile h1 {
+    font-size: 2vw;
+    font-weight: normal;
+  }
+  
+    #connect-tile a {
+    font-size: 2vw;
+  }
+  
+  #connect-tile img {
+    height: 10vw;
+    width: auto;
+  }
+  
+#buffer {
+  position: absolute;
+  left: 0;
+  right:0;
+  top: 250.1vw;
+  height: 3vw;
+  width:100%;
+  background-color: var(--offwhite);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+  
 #footer {
   position: absolute;
-  top: 250.1vw;
+  top: 253.6vw;
   left: 0;
   right: 0;
   height: 10vw;
@@ -368,10 +417,10 @@ a {
   align-items: center;
 }
 
-#footer h1 {
+#footer a {
   font-family: "Garamond";
-  color: white;
-  font-size: 2vw;
+  color: var(--white);
+  font-size: 1.5vw;
   padding-left: 5vw;
   padding-right: 5vw;
 }
