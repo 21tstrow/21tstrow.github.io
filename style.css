@@ -6,6 +6,7 @@
   --white: #FFF;
   --gray: rgb(125,125,125);
   --offwhite2: rgb(240,235,240);
+  --lightgreen: rgb(109,172,106);
 }
 
 body {
@@ -18,7 +19,7 @@ body {
 }
 
 /* For laptops & PCs */
-@media all and (min-width: 1px) {
+@media all and (min-width: 769px) {
 
   body {
       background-color: var(--black);
@@ -165,7 +166,7 @@ a {
   border-top: 3vw var(--black) solid;
 }
   
-#research-links {
+  #research-links {
   position: absolute;
   left: 0;
   right:0;
@@ -184,6 +185,10 @@ a {
   align-items: center;
   border-top: 1vw var(--black) solid;
 }
+  
+  #featured-insights {
+    font-size: 4vw;
+  }
 
  #insight-tile {
   margin: 0vw 5vw 2vw 5vw;
@@ -195,6 +200,12 @@ a {
   border: 0.5vw solid var(--black);
   border-radius: 1vw;
  }
+  #insight-tile h1{
+    font-size: 3.25vw;
+  }
+  #insight-tile p{
+    font-size: 2vw;
+  }
   
   #insight-tile:hover {
   background-color: var(--offwhite2);
@@ -230,26 +241,109 @@ a {
   left: 0;
   right:0;
   top: 149.1vw;
-  height: 35vw;
+  height: 75vw;
   width:100%;
-  background-color: rgb(45,154,265);
+  background-color: var(--lightgreen);
+  background-image: url("https://github.com/21tstrow/21tstrow.github.io/blob/main/images/treebackground.png?raw=true");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  color: var(--white);
+  font-size: 2.25vw;
 }
+
+#analytical-skills {
+    font-size 2.25vw;
+    background-color: rgba(0,0,0,0.75);
+    padding: 2vw;
+    margin-top: -5vw;
+    margin-bottom: 15vw;
+  }
+
+  #an-skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -37.5vw;
+    margin-bottom: -50vw;
+  }
+  
+ #skill {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   height: 25vw;
+   width: 25vw;
+   background-color: rgb(0,0,0,0.75);
+   margin: 2vw;
+   color: black;
+ }
+  
+#skill h1 {
+  font-size: 3vw;
+  color: var(--white);
+  margin: -1.25vw 0 0.25vw 0;
+  border-bottom: 0.25vw solid var(--white);
+}
+
+  #skill p {
+    font-size: 1.75vw;
+    color: var(--white);
+    margin: 0vw 0 0 0;
+  }
+  
+#skill img {
+    width: auto;
+    height: 5vw;
+    margin: 2vw 0 2vw;
+  }
+
+  #other-an {
+    margin: 51vw 0 0 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 83vw;
+    height: 15vw;
+    background-color: rgb(0,0,0,0.75)
+  }
+  
+  #other-an h1 {
+    font-size: 3vw;
+  }
+  
+  #other-an-skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 83vw;
+    padding: 1vw 0 0.7vw 0;
+    background-color: rgb(255,255,255,0.75);
+  }
+  
+  #other-an-skills img {
+    height: 6vw;
+    width: auto;
+    margin-left: 0.25vw;
+  }
   
 #connect {
   position: absolute;
   left: 0;
   right:0;
-  top: 179.1vw;
+  top: 225.1vw;
   height: 25vw;
   width:100%;
-  background-color: rgb(45,154,65);
+  background-color: var(--offwhite);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -261,7 +355,7 @@ a {
 
 #footer {
   position: absolute;
-  top: 204.1vw;
+  top: 250.1vw;
   left: 0;
   right: 0;
   height: 10vw;
@@ -290,4 +384,12 @@ a {
   
   
 }
+
+/*For smart phones and portrait tablets*/
+@media screen and (max-width: 480px) {
+
+}
+/*Tablets*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+ 
 }
