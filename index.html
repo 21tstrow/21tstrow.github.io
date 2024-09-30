@@ -183,7 +183,7 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <button class="navbar-link" data-nav-link>Connect</button>
           </li>
 
         </ul>
@@ -749,119 +749,239 @@
         - #PORTFOLIO
       -->
 
-      <article class="Portfolio" data-page="Portfolio">
+      <article class="portfolio" data-page="portfolio">
 
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
         </header>
 
-        <section class="timeline">
+        <section class="projects">
 
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
+          <ul class="filter-list">
 
-            <h3 class="h3">Renewable Energy Finance</h3>
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
           </div>
 
-          <ol class="timeline-list">
+          <ul class="project-list">
 
-            <li class="timeline-item">
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
 
-              <h4 class="h4 timeline-item-title">Pricing D6 RINs Under Imperfect Fungibility</h4>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
 
-              <span>Work in Progress. PDF: <a>pdf</a>, Code: <a>code</a>, Data: <a>data</a></span>
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
 
-              <p class="timeline-text">
-                Abstract: This paper examines the pricing dynamics of D6 Renewable Identification Numbers (RINs), highlighting the complexities that arise due to imperfect fungibility. While existing literature often focuses on the price spread between ethanol and gasoline as a primary determinant of RIN prices, this study introduces a more nuanced model that accounts for additional factors such as RIN generation year, Quality Assurance Program (QAP) verification status, volatility in ethanol and gasoline prices, and seasonal trading patterns. The results suggest that past RIN prices, energy price volatility, verification status, RIN age, and transaction month all play significant roles in determining current RIN values, offering important insights for traders and policymakers alike. This research challenges traditional pricing models and provides a framework for better understanding the dynamics of the D6 RIN market.
-              </p>
+                <h3 class="project-title">Finance</h3>
 
+                <p class="project-category">Web development</p>
+
+              </a>
             </li>
 
-            <li class="timeline-item">
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
 
-              <h4 class="h4 timeline-item-title">D3 RINs</h4>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
 
-              <span>Proposal. PDF: <a>pdf</a></span>
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
 
-              <p class="timeline-text">
-                Abstract: This paper will explore the core value of D3 Renewable Identification Numbers (RINs), which are issued under the Renewable Fuel Standard (RFS) for cellulosic biofuel production. D3 RIN prices are predicted to be influenced by a combination of market forces, production costs, regulatory mandates, and environmental incentives. In this paper, we will develop an econometric model that relates D3 RIN prices to key drivers, including cellulosic biofuel production costs, Cellulosic Waiver Credit (CWC) prices, the gap between mandated and actual biofuel production, carbon intensity reductions (for interplay with other environmental incentives), and natural gas prices. The model will incorporate interaction terms to capture the dynamic relationships between production costs and the scarcity of cellulosic biofuels relative to mandated volumes. Using historical data on RIN prices, production costs, and regulatory factors, we will estimate the model to assess the relative contributions of these factors to D3 RIN price movements. Our findings should provide insights into the pricing dynamics of D3 RINs, offering a framework for market participants and policymakers to better understand the valuation of cellulosic biofuel credits under the RFS program.
-              </p>
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
             </li>
 
-            <li class="timeline-item">
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
 
-              <h4 class="h4 timeline-item-title">C02 Decoupling</h4>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
 
-              <span>WIP. PDF: <a>pdf</a></span>
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
 
-              <p class="timeline-text">
-              May or may not actually be a part of this one.
-              </p>
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
             </li>
-          </ol>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
 
         </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Efficient Market Hypothesis</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Investor Volatility GME Paper</h4>
-
-              <span>CGO Paper. PDF: <a>pdf</a></span>
-
-              <p class="timeline-text">
-                I need to get the full name for this one.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-<section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Behavioral Economics</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Risk Tolerance</h4>
-
-              <span>WIP</span>
-
-              <p class="timeline-text">
-                 WIP with Palm Beach Atlantic University.
-              </p>
-
-            </li>
-            
-          </ol>
-
-        </section>
-        
 
       </article>
+
+
 
 
 
@@ -1052,6 +1172,10 @@
         </section>
 
       </article>
+
+
+
+
 
       <!--
         - #CONTACT
