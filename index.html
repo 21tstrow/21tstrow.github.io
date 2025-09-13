@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tucker Strow — Personal Site</title>
+  <meta name="description" content="Personal website for Tucker Strow — first‑year Finance PhD student. Resume‑driven single‑file site with headshot space and extended CV." />
+  <meta property="og:title" content="Tucker Strow — Personal Site" />
+  <meta property="og:description" content="Resume‑driven single‑file site. Programming, experience, education, contact." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b0b0c" />
+  <style>
+    :root {
+      --bg: #0b0b0c;
+      --panel: #111214;
+      --panel-2: #15171a;
+      --text: #f3f4f6;
+      --muted: #9aa3af;
+      --accent: #bf5700; /* sparing accent */
+      --accent-2: #ff9432;
+      --ring: rgba(255,255,255,0.12);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --radius-lg: 24px;
+      --maxw: 1120px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root:not(.dark) {
+        --bg: #f7f7f9; --panel: #ffffff; --panel-2: #fafafa; --text: #0b0b0c; --muted: #48505a; --ring: rgba(0,0,0,0.09); --shadow: 0 8px 25px rgba(0,0,0,.08);
+      }
+    }
+    html.dark { --bg:#0b0b0c; --panel:#111214; --panel-2:#15171a; --text:#f3f4f6; --muted:#9aa3af; --ring:rgba(255,255,255,0.12); --shadow: 0 10px 30px rgba(0,0,0,.35); }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color:var(--text); background:
+      radial-gradient(1200px 600px at 20% -10%, rgba(191,87,0,0.18), transparent 60%),
+      radial-gradient(900px 500px at 110% 10%, rgba(255,148,50,0.12), transparent 60%),
+      var(--bg); background-attachment: fixed; line-height:1.6; letter-spacing:.1px}
+    a{color:var(--accent); text-decoration:none} a:hover{text-decoration:underline}
+    .container{max-width:var(--maxw); margin-inline:auto; padding-inline:20px}
+    /* NAV */
+    .nav{position:sticky; top:0; z-index:40; backdrop-filter:saturate(1.2) blur(10px); background: color-mix(in oklab, var(--panel) 85%, transparent); border-bottom:1px solid var(--ring)}
+    .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:12px 20px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .avatar{width:40px; height:40px; border-radius:50%; background: conic-gradient(from 180deg at 50% 50%, var(--accent), var(--accent-2)); display:grid; place-items:center; color:white; font-weight:700; box-shadow:var(--shadow)}
+    .nav-links{display:flex; gap:18px; align-items:center}
+    .nav a{color:var(--text); opacity:.9}
+    .nav button{border:1px solid var(--ring); background:var(--panel-2); color:var(--text); border-radius:999px; padding:6px 12px; cursor:pointer; box-shadow:var(--shadow)}
+    .progress{position:absolute; left:0; bottom:-1px; height:2px; background: linear-gradient(90deg, var(--accent), var(--accent-2))}
+    section{padding:64px 0; scroll-margin-top:80px}
+    .card{background: color-mix(in oklab, var(--panel) 92%, transparent); border:1px solid var(--ring); border-radius:var(--radius); box-shadow:var(--shadow); padding:24px}
+    .card-grid{display:grid; grid-template-columns: repeat(12, 1fr); gap:20px}
+    .span-4{grid-column: span 4} .span-6{grid-column: span 6} .span-8{grid-column: span 8} .span-12{grid-column:1/-1}
+    @media (max-width:900px){.span-4,.span-6,.span-8{grid-column:1/-1}}
+    h1,h2,h3{line-height:1.2; margin:0 0 16px} h1{font-size:clamp(28px,4vw,44px)} h2{font-size:clamp(22px,3vw,30px)} h3{font-size:18px}
+    p.lead{font-size:clamp(16px,2vw,20px); color:var(--muted); margin:8px 0 0}
+    .pill{display:inline-flex; align-items:center; gap:8px; border:1px solid var(--ring); background:var(--panel-2); border-radius:999px; padding:6px 12px; font-size:14px; color:var(--muted)}
+    .btn{display:inline-flex; align-items:center; gap:10px; border-radius:12px; padding:12px 16px; border:1px solid var(--ring); background: linear-gradient(180deg, color-mix(in oklab, var(--accent) 22%, var(--panel-2)), var(--panel)); color:var(--text); font-weight:600; text-decoration:none; box-shadow:var(--shadow)}
+    .btn.secondary{background:var(--panel-2); font-weight:500}
+    .muted{color:var(--muted)} .kbar{height:1px; background:linear-gradient(90deg, transparent, var(--ring), transparent); margin:32px 0; border:0}
+    /* HERO */
+    .hero{padding:88px 0 64px}
+    .hero-grid{display:grid; grid-template-columns: 1.25fr 1fr; gap:28px; align-items:center}
+    @media (max-width:1000px){.hero-grid{grid-template-columns:1fr}}
+    .headshot{position:relative; min-height:260px; border-radius:var(--radius-lg); overflow:hidden; display:grid; place-items:center; background:var(--panel-2); border:1px solid var(--ring)}
+    .headshot img{max-width:100%; height:100%; width:100%; object-fit:cover; display:block}
+    .headshot .placeholder{position:absolute; inset:0; display:grid; place-items:center; color:var(--muted); font-weight:600}
+    /* FOOTER */
+    footer{padding:48px 0 64px; color:var(--muted); font-size:14px}
+    :focus-visible{outline:2px solid color-mix(in oklab, var(--accent) 50%, transparent); outline-offset:2px; border-radius:8px}
+    @media print{nav,.nav,.progress,.btn,.kbar{display:none !important}; body{background:white; color:black}; .card,section{box-shadow:none !important; border:0 !important; background:white !important}}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main">
+    <div class="nav-inner container">
+      <div class="brand">
+        <div class="avatar" aria-hidden>TS</div>
+        <div class="name" style="font-weight:700; letter-spacing:.3px">Tucker Strow</div>
+        <span class="pill">Finance PhD Student</span>
+      </div>
+      <div class="nav-links" role="menubar">
+        <a href="#about" role="menuitem">About</a>
+        <a href="#cv" role="menuitem">CV</a>
+        <a href="#contact" role="menuitem">Contact</a>
+        <button id="themeBtn" aria-label="Toggle dark mode" title="Toggle theme">☾</button>
+      </div>
+      <div class="progress" id="progress" style="width:0%"></div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Tucker Strow</h1>
+        <h2>Finance PhD Student</h2>
+        <p class="lead">Generalist mindset. Data‑driven. Clean methods, clear writing, and reproducible workflows.</p>
+        <div style="height:16px"></div>
+        <div class="pill">Resume‑centric site — no publications yet</div>
+        <div style="height:18px"></div>
+        <div class="strip" style="display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn" id="emailBtn" href="#" rel="nofollow">Email me</a>
+          <a class="btn secondary" href="#cv">View CV</a>
+        </div>
+      </div>
+      <aside class="headshot card" aria-label="Headshot">
+        <img id="headshot" alt="Headshot of Tucker Strow" src="" />
+        <div class="placeholder">Place a file named <code>headshot.jpg</code> next to this HTML to show your photo.</div>
+      </aside>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" aria-labelledby="about-h">
+    <div class="container card-grid">
+      <div class="card span-8">
+        <h2 id="about-h">About</h2>
+        <p>
+          I’m a first‑year Finance PhD student focused on building strong fundamentals in theory, econometrics, and research hygiene. I like simple models that travel, careful measurement, and code that explains itself.
+        </p>
+        <p class="muted">This site is a tidy, single‑file snapshot pulled from my CV. It’ll grow as I do.</p>
+      </div>
+      <aside class="card span-4">
+        <h3>Quick Links</h3>
+        <ul class="clean" style="list-style:none; margin:8px 0 0; padding:0">
+          <li><a id="lkdn" href="https://www.linkedin.com/in/tuckerstrow/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a id="gh" href="https://github.com/" target="_blank" rel="noopener">GitHub</a> (placeholder)</li>
+        </ul>
+        <div style="height:12px"></div>
+        <h3>Location</h3>
+        <p class="muted">Jupiter, FL</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CV (EXTENDED) -->
+  <section id="cv" aria-labelledby="cv-h">
+    <div class="container card-grid">
+      <div class="card span-12">
+        <h2 id="cv-h">Curriculum Vitae — Snapshot</h2>
+        <p class="muted">Print this page to PDF for a quick shareable copy. Content adapted from my current CV.</p>
+      </div>
+
+      <!-- SUMMARY + CONTACT -->
+      <div class="card span-6">
+        <h3>Summary</h3>
+        <p>Early‑stage researcher with strong quantitative training and practical finance experience. Interested in markets, data, and decision‑making. I value reproducible analysis and transparent documentation.</p>
+      </div>
+      <div class="card span-6">
+        <h3>Contact</h3>
+        <ul class="clean">
+          <li>Email: <a id="mailSpan" href="#">(click to reveal)</a></li>
+          <li>Phone: <span class="muted">(270) 421‑0172</span></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/tuckerstrow/" target="_blank" rel="noopener">tuckerstrow</a></li>
+          <li>Address: Jupiter, FL 33478</li>
+        </ul>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="card span-12">
+        <h3>Education</h3>
+        <ul class="clean">
+          <li><strong>PhD in Finance</strong> — The University of Texas at Austin (McCombs), <em>Aug 2025 – Present</em></li>
+          <li><strong>Master’s of Financial Economics</strong> — Utah State University, <em>Aug 2024 – May 2025</em> · Graduate Research Fellow, Center for Growth and Opportunity · Investment Practicum handling MBS for a $150k+ portfolio</li>
+          <li><strong>B.S. in Finance & Economics (4.0, Summa Cum Laude)</strong> — The University of Texas at Dallas, <em>Aug 2021 – May 2024</em> · National Merit Scholar, Honors College</li>
+        </ul>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="card span-12">
+        <h3>Experience</h3>
+        <div class="card-grid">
+          <div class="span-6">
+            <h4 style="margin:0 0 6px">Kinder Morgan — Rotational Finance Intern</h4>
+            <div class="muted" style="margin-bottom:8px">May 2024 – Aug 2024</div>
+            <ul class="clean">
+              <li>Updated and re‑configured 2025 budgets for OSG departments; built cleaner data‑pull formats.</li>
+              <li>Quality‑assurance checks and automated ESG reports in Excel VBA.</li>
+              <li>Explored creation and monetization of RINs within Energy Transition Ventures (ETV).</li>
+            </ul>
+          </div>
+          <div class="span-6">
+            <h4 style="margin:0 0 6px">Sunoco LP — Finance Intern (FP&A)</h4>
+            <div class="muted" style="margin-bottom:8px">May 2023 – Aug 2023</div>
+            <ul class="clean">
+              <li>Partnered with data analytics and sales teams; collaborated with Energy Transfer finance.</li>
+              <li>Automated reporting and summaries using Excel VBA and Python.</li>
+              <li>Investigated system discrepancies and double‑counting in reporting pipelines.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROGRAMMING (explicit list as requested) -->
+      <div class="card span-12">
+        <h3>Programming</h3>
+        <div class="card-grid">
+          <div class="span-6">
+            <ul class="clean">
+              <li><strong>Languages & Core Tools:</strong> Java; JavaScript; CSS; HTML; Python; R; SQL; Stata; Pandas; Excel VBA</li>
+              <li><strong>Data/Visualization:</strong> Tableau; (Python/R plotting stacks)</li>
+            </ul>
+          </div>
+          <div class="span-6">
+            <ul class="clean">
+              <li><strong>Concepts:</strong> Time series (ARMA, ACF/PACF), tree‑based models, forecasting</li>
+              <li><strong>Workflow:</strong> Git, reproducible scripts, clear README and changelogs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- COURSEWORK -->
+      <div class="card span-12">
+        <h3>Selected Coursework</h3>
+        <div class="card-grid">
+          <div class="span-4">
+            <ul class="clean">
+              <li>Econometrics II (PhD)</li>
+              <li>Advanced Financial Economics</li>
+              <li>Business Analytics with R</li>
+              <li>Advanced Statistics for Data Science</li>
+              <li>Markets and Trading</li>
+            </ul>
+          </div>
+          <div class="span-4">
+            <ul class="clean">
+              <li>Financial Information & Analysis</li>
+              <li>Financial Modeling</li>
+              <li>Managerial & Financial Accounting</li>
+              <li>Business & Economic Forecasting</li>
+            </ul>
+          </div>
+          <div class="span-4">
+            <ul class="clean">
+              <li>Microeconomic Theory</li>
+              <li>Econometrics</li>
+              <li>Intermediate Macro & Micro</li>
+              <li>Multivariable Calculus</li>
+              <li>Linear Algebra</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- TESTS & EXTRAS -->
+      <div class="card span-6">
+        <h3>Standardized Tests</h3>
+        <ul class="clean">
+          <li>GRE: 339 (V 169, Q 170, AW 5.5)</li>
+          <li>ACT: 36</li>
+        </ul>
+      </div>
+      <div class="card span-6">
+        <h3>Extracurriculars</h3>
+        <ul class="clean">
+          <li>Graduate Research Fellow — Center for Growth and Opportunity (Aug 2024 – May 2025); energy policy research on environmental credits (RINs).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-h">
+    <div class="container card-grid">
+      <div class="card span-12">
+        <h2 id="contact-h">Contact</h2>
+        <p>If you’d like to chat about research ideas or collaboration, reach out.</p>
+        <div class="strip" style="display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn" id="emailBtn2" href="#" rel="nofollow">Email Tucker</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/tuckerstrow/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap">
+      <div>© <span id="year"></span> Tucker Strow</div>
+      <div>Last updated: <span id="updated"></span></div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Theme persistence
+    (function(){
+      const root=document.documentElement; const stored=localStorage.getItem('theme');
+      const prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if(stored==='dark'||(!stored&&prefersDark)) root.classList.add('dark');
+      const btn=document.getElementById('themeBtn'); const setIcon=()=>btn.textContent=root.classList.contains('dark')?'☼':'☾'; setIcon();
+      btn.addEventListener('click',()=>{root.classList.toggle('dark'); localStorage.setItem('theme',root.classList.contains('dark')?'dark':'light'); setIcon();});
+    })();
+    // Scroll progress
+    (function(){ const bar=document.getElementById('progress'); const onScroll=()=>{ const docH=document.documentElement.scrollHeight-window.innerHeight; const sc=Math.max(0, Math.min(1, window.scrollY/docH)); bar.style.width=(sc*100).toFixed(2)+'%';}; window.addEventListener('scroll', onScroll, {passive:true}); onScroll(); })();
+    // Email obfuscation
+    (function(){ const user='tucker.kent.strow'; const host='gmail.com'; const addr=user+'@'+host; const linkify=a=>{a.href='mailto:'+addr; a.textContent=a.textContent.includes('Email')?a.textContent:addr;}; ['emailBtn','emailBtn2'].forEach(id=>{const a=document.getElementById(id); if(a) linkify(a);}); const m=document.getElementById('mailSpan'); if(m){ m.textContent=addr; m.href='mailto:'+addr; }} )();
+    // Headshot auto-load if present
+    (function(){
+      const img=document.getElementById('headshot');
+      const testSrc='headshot.jpg';
+      fetch(testSrc, {method:'HEAD'}).then(r=>{ if(r.ok){ img.src=testSrc; } });
+    })();
+    // Footer dates
+    (function(){ document.getElementById('year').textContent=new Date().getFullYear(); document.getElementById('updated').textContent=new Date(document.lastModified).toLocaleDateString(undefined,{year:'numeric', month:'short', day:'numeric'}); })();
+  </script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tucker Strow",
+    "jobTitle": "PhD Student (Finance)",
+    "address": {"@type": "PostalAddress", "addressLocality": "Jupiter", "addressRegion": "FL", "postalCode":"33478", "addressCountry": "US"},
+    "sameAs": ["https://www.linkedin.com/in/tuckerstrow/"]
+  }
+  </script>
+</body>
+</html>
