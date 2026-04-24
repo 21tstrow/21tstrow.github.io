@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV — Tucker Strow</title>
+  <meta name="description" content="Curriculum Vitae for Tucker Strow, PhD Student in Finance at UT Austin.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-name">Tucker Strow</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="replication.html">Replication</a>
+        <a href="cv.html" class="active">CV</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">&#9789;</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <main>
+
+      <h1>Curriculum Vitae</h1>
+      <p><a class="cv-download" href="assets/Tucker_Strow_CV.pdf" download>&#8681; Download PDF</a></p>
+
+      <section>
+        <h2>Education</h2>
+
+        <div class="cv-entry">
+          <h3>PhD in Finance</h3>
+          <div class="meta">The University of Texas at Austin, McCombs School of Business &middot; Aug 2025 &ndash; Present</div>
+        </div>
+
+        <div class="cv-entry">
+          <h3>Master's of Financial Economics</h3>
+          <div class="meta">Utah State University &middot; Aug 2024 &ndash; May 2025</div>
+          <ul>
+            <li>Graduate Research Fellow, Center for Growth and Opportunity</li>
+            <li>Investment Practicum &mdash; managed MBS allocation within a $150k+ student-run portfolio</li>
+          </ul>
+        </div>
+
+        <div class="cv-entry">
+          <h3>B.S. in Finance &amp; Economics</h3>
+          <div class="meta">The University of Texas at Dallas &middot; Aug 2021 &ndash; May 2024 &middot; GPA 4.0, <em>Summa Cum Laude</em></div>
+          <ul>
+            <li>National Merit Scholar, Honors College</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+
+        <div class="cv-entry">
+          <h3>Kinder Morgan &mdash; Rotational Finance Intern</h3>
+          <div class="meta">May 2024 &ndash; Aug 2024</div>
+          <ul>
+            <li>Updated and re-configured 2025 budgets for OSG departments; built cleaner data-pull formats</li>
+            <li>Quality-assurance checks and automated ESG reports in Excel VBA</li>
+            <li>Explored creation and monetization of RINs within Energy Transition Ventures</li>
+          </ul>
+        </div>
+
+        <div class="cv-entry">
+          <h3>Sunoco LP &mdash; Finance Intern (FP&amp;A)</h3>
+          <div class="meta">May 2023 &ndash; Aug 2023</div>
+          <ul>
+            <li>Partnered with data analytics and sales teams; collaborated with Energy Transfer finance</li>
+            <li>Automated reporting and summaries using Excel VBA and Python</li>
+            <li>Investigated system discrepancies and double-counting in reporting pipelines</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Research</h2>
+
+        <div class="cv-entry">
+          <h3>Graduate Research Fellow</h3>
+          <div class="meta">Center for Growth and Opportunity, Utah State University &middot; Aug 2024 &ndash; May 2025</div>
+          <ul>
+            <li>Energy policy research on environmental credits (RINs)</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Programming &amp; Skills</h2>
+        <div class="cv-skills">
+          <div>
+            <h3>Languages &amp; Tools</h3>
+            <ul class="clean">
+              <li>Python, R, Stata, SQL</li>
+              <li>Java, JavaScript, HTML/CSS</li>
+              <li>Excel VBA, Pandas</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Methods &amp; Workflow</h3>
+            <ul class="clean">
+              <li>Econometrics, time series analysis</li>
+              <li>Tableau, data visualization</li>
+              <li>Git, reproducible research workflows</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Selected Coursework</h2>
+        <ul class="clean cv-coursework">
+          <li>Econometrics II (PhD)</li>
+          <li>Advanced Financial Economics</li>
+          <li>Business Analytics with R</li>
+          <li>Advanced Statistics for Data Science</li>
+          <li>Markets and Trading</li>
+          <li>Financial Information &amp; Analysis</li>
+          <li>Financial Modeling</li>
+          <li>Managerial &amp; Financial Accounting</li>
+          <li>Business &amp; Economic Forecasting</li>
+          <li>Microeconomic Theory</li>
+          <li>Econometrics</li>
+          <li>Intermediate Macro &amp; Micro</li>
+          <li>Multivariable Calculus</li>
+          <li>Linear Algebra</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Standardized Tests</h2>
+        <ul class="clean cv-tests">
+          <li><strong>GRE:</strong> 336 (V 167, Q 169, AW 5.5)</li>
+          <li><strong>ACT:</strong> 36</li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span>&copy; <span id="year"></span> Tucker Strow</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    (function() {
+      var toggle = document.getElementById('themeToggle');
+      var root = document.documentElement;
+      var stored = localStorage.getItem('theme');
+
+      if (stored === 'dark') {
+        root.setAttribute('data-theme', 'dark');
+        toggle.innerHTML = '&#9788;';
+      }
+
+      toggle.addEventListener('click', function() {
+        if (root.getAttribute('data-theme') === 'dark') {
+          root.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'light');
+          toggle.innerHTML = '&#9789;';
+        } else {
+          root.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+          toggle.innerHTML = '&#9788;';
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
